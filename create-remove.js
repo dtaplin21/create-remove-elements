@@ -20,6 +20,8 @@ add.addEventListener("click", async () => {
         const li = document.createElement(li);
 
         const figure = document.createElement("figure");
+        li.appendChild(figure);
+        //console.log(li);
 
         const image = document.createElement("img");
         image.src = url
@@ -27,8 +29,11 @@ add.addEventListener("click", async () => {
         const figCap = document.createElement("figCaption");
         figCap.innerText = breed;
 
+        figure.append(img, figCap);
+
         /* Add the new dog card as a child to the ul in the .gallery element */
-        // Your code here
+        const ul = document.querySelector("ul");
+        ul.appendChild(li)
 
     } catch (e) {
         console.log("Couldn't fetch dog :(")
@@ -39,10 +44,10 @@ add.addEventListener("click", async () => {
 const removeFirst = document.getElementById("remove-first");
 removeFirst.addEventListener("click", () => {
     /*-------------------- Select the first dog card --------------------- */
-    // Your code here
+    const doomedDog = document.querySelector("li")
 
     /*-------------------- Remove the first dog card --------------------- */
-    // Your code here
+    doomedDog.remove()
 });
 
 const ul = document.querySelector("ul");
@@ -63,7 +68,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 const removeLast = document.getElementById("remove-last");
 removeLast.addEventListener("click", () => {
     /*-------------------- Select the last dog card ----------------------- */
-    // Your code here
+    const dogsLi = document.getElementsByTagName("li");
+    const doomesDog = dogsLi[dogsLi.length[-1]]
+    console.log(dogsLi)
 
     /*-------------------- Remove the last dog card ----------------------- */
     // Your code here
