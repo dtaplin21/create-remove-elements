@@ -9,11 +9,23 @@ add.addEventListener("click", async () => {
 
         /*--------------- Get breed (Hint: Parse from URL) ---------------- */
 
+        console.log(url)
+        const breed = url.split("/")[4]
+        console.log(breed)
 
         /*------------ Create new dog card with the url above ------------- */
         /* (use the HTML structure for the current dog image in the index.html
             file to create a new image with the url) */
         // Your code here
+        const li = document.createElement(li);
+
+        const figure = document.createElement("figure");
+
+        const image = document.createElement("img");
+        image.src = url
+
+        const figCap = document.createElement("figCaption");
+        figCap.innerText = breed;
 
         /* Add the new dog card as a child to the ul in the .gallery element */
         // Your code here
