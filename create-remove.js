@@ -8,7 +8,7 @@ add.addEventListener("click", async () => {
         const url = data.message; // URL of new dog image
 
         /*--------------- Get breed (Hint: Parse from URL) ---------------- */
-        // Your code here
+
 
         /*------------ Create new dog card with the url above ------------- */
         /* (use the HTML structure for the current dog image in the index.html
@@ -32,6 +32,20 @@ removeFirst.addEventListener("click", () => {
     /*-------------------- Remove the first dog card --------------------- */
     // Your code here
 });
+
+const ul = document.querySelector("ul");
+ul.addEventListener("click", () => {
+    console.log("click on me you did")
+})
+
+document.addEventListener("DOMContentLoaded", (e) => {
+  console.log(e.target);
+  if(e.target === ul) {
+    console.log("you clicked ul")
+  } else {
+    console.log("not ul")
+  }
+})
 
 /************************** REMOVE LAST DOG BUTTON ***************************/
 const removeLast = document.getElementById("remove-last");
