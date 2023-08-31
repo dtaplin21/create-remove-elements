@@ -17,6 +17,8 @@ add.addEventListener("click", async () => {
         /* (use the HTML structure for the current dog image in the index.html
             file to create a new image with the url) */
         // Your code here
+
+        document.querySelector("ul")
         const li = document.createElement(li);
 
         const figure = document.createElement("figure");
@@ -25,6 +27,8 @@ add.addEventListener("click", async () => {
 
         const image = document.createElement("img");
         image.src = url
+        //or
+        //img.setAttribute("src", url)
 
         const figCap = document.createElement("figCaption");
         figCap.innerText = breed;
