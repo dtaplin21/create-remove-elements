@@ -10,7 +10,7 @@ add.addEventListener("click", async () => {
         /*--------------- Get breed (Hint: Parse from URL) ---------------- */
 
         console.log(url)
-        const breed = url.split("/")[4]
+        const breed = url.split("/")
         console.log(breed)
 
         /*------------ Create new dog card with the url above ------------- */
